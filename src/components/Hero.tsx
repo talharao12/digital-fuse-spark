@@ -4,30 +4,30 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative py-20 sm:py-32 overflow-hidden">
+    <section className="relative py-20 sm:py-32 overflow-hidden bg-primary">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center space-x-2 bg-accent/20 text-accent-foreground px-4 py-2 rounded-full mb-6 fade-in">
+          <div className="inline-flex items-center space-x-2 bg-accent/30 text-primary-foreground px-4 py-2 rounded-full mb-6 fade-in">
             <Sparkles className="h-4 w-4" />
             <span className="text-sm font-medium">Digital Marketing Experts</span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance mb-6 fade-in">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance mb-6 fade-in text-primary-foreground">
             Ignite Your Brand.
             <br />
             <span className="text-accent">Amplify Your Digital Presence.</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg sm:text-xl text-muted-foreground text-balance mb-8 fade-in max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-primary-foreground/80 text-balance mb-8 fade-in max-w-2xl mx-auto">
             Digital Fuse helps businesses scale with strategic digital marketing, performance ads, and powerful brand storytelling.
           </p>
 
@@ -54,7 +54,7 @@ const Hero = () => {
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-3xl font-bold text-accent">{stat.number}</div>
-                <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+                <div className="text-sm text-primary-foreground/70 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
