@@ -45,6 +45,13 @@ All colors MUST be HSL.
     --cream: 47 91% 95%;
     --slate: 223 18% 22%;
     --steel: 197 16% 31%;
+    
+    /* Modern Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(223 18% 22%), hsl(197 16% 31%));
+    --gradient-accent: linear-gradient(135deg, hsl(73 22% 64%), hsl(73 22% 54%));
+    --shadow-glow: 0 0 40px hsl(73 22% 64% / 0.3);
+    --shadow-elegant: 0 10px 30px -10px hsl(223 18% 22% / 0.4);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -130,6 +137,14 @@ All colors MUST be HSL.
     animation: fadeIn 0.6s ease-in;
   }
   
+  .glass-effect {
+    @apply backdrop-blur-lg bg-white/10 border border-white/20;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent to-accent-foreground bg-clip-text text-transparent;
+  }
+  
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -139,5 +154,14 @@ All colors MUST be HSL.
       opacity: 1;
       transform: translateY(0);
     }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
   }
 }
