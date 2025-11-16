@@ -35,14 +35,19 @@ const TestimonialsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-primary hover-lift border-accent/30">
+            <Card key={index} className="group bg-gradient-to-br from-primary to-primary/90 border-accent/30 hover:border-accent hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 text-accent fill-accent" />
                   ))}
                 </div>
-                <p className="text-primary-foreground/70 mb-6 italic">"{testimonial.content}"</p>
+                <div className="mb-4">
+                  <svg className="w-8 h-8 text-accent/40" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
+                <p className="text-primary-foreground/80 mb-6 text-base leading-relaxed">{testimonial.content}</p>
                 <div>
                   <p className="font-semibold text-primary-foreground">{testimonial.name}</p>
                   <p className="text-sm text-primary-foreground/60">{testimonial.role}</p>

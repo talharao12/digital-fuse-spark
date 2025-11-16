@@ -39,15 +39,16 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="hover-lift bg-primary border-accent/30 hover:border-accent/60 transition-all"
+              className="group hover-lift bg-gradient-to-br from-primary to-primary/80 border-accent/30 hover:border-accent hover:shadow-2xl transition-all duration-500 overflow-hidden relative"
             >
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-accent/30 flex items-center justify-center mb-4">
-                  <service.icon className="h-6 w-6 text-primary-foreground" />
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/0 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <CardHeader className="relative z-10">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-accent/40 to-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
+                  <service.icon className="h-7 w-7 text-accent-foreground" />
                 </div>
-                <CardTitle className="text-xl text-primary-foreground">{service.title}</CardTitle>
+                <CardTitle className="text-xl text-primary-foreground group-hover:text-accent transition-colors duration-300">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="relative z-10">
                 <CardDescription className="text-base text-primary-foreground/70">{service.description}</CardDescription>
               </CardContent>
             </Card>
