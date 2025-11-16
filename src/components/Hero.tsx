@@ -47,7 +47,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-base border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 backdrop-blur-sm hover:scale-105 transition-all duration-300">
+            <Button asChild size="lg" variant="outline" className="text-base border-2 border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 backdrop-blur-sm hover:scale-105 transition-all duration-300">
               <Link to="/contact">Book a Consultation</Link>
             </Button>
           </div>
