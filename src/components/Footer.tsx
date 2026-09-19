@@ -49,11 +49,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
                 <Link to="/contact" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   Contact
                 </Link>
@@ -86,10 +81,27 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-primary-foreground/20">
-          <p className="text-center text-sm text-primary-foreground/60">
+        <div className="mt-8 pt-8 border-t border-primary-foreground/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-primary-foreground/60">
             © {currentYear} Digital Fuse. All rights reserved.
           </p>
+          <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <li>
+              <Link to="/privacy" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link to="/terms" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+                Terms of Service
+              </Link>
+            </li>
+            <li>
+              <Link to="/data-deletion" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+                Data Deletion
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
